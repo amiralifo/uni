@@ -6,7 +6,7 @@ class Profile(models.Model):
     last_name = models.CharField(max_length=30)
     birth_day = models.DateField(blank=True, null=True)
     field = models.CharField(max_length=30)
-
+    
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
 
@@ -26,7 +26,6 @@ class Term(models.Model):
 
     def __str__(self):
         return self.title
-
 
 class Course(models.Model):
     name = models.CharField(max_length=30)
