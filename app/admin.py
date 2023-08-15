@@ -13,6 +13,7 @@ class CourseAdmin(admin.ModelAdmin):
 
 admin.site.register(Course, CourseAdmin)
 
+
 class TermAdmin(admin.ModelAdmin):
     list_display = ('id', 'title',)
     readonly_fields = ('id',)
