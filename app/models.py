@@ -27,10 +27,11 @@ class Term(models.Model):
     def __str__(self):
         return self.title
 
+
 class Course(models.Model):
     name = models.CharField(max_length=30)
     point = models.IntegerField()
-    term = models.ForeignKey(Term, on_delete=models.CASCADE)
+    term = models.ForeignKey(Term, on_delete=models.CASCADE, related_name='courses')
 
 
 class StudentCourse(models.Model):
